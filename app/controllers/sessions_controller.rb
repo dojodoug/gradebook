@@ -2,15 +2,20 @@ class SessionsController < ApplicationController
   def new
   end
 
-  # def create
-  #   teacher = Teacher.find_by(params[:email])
-  #     if teacher && teacher.authenticate(params[:password])
-  #       session[:something] = #something
-  #       redirect_to teachers_path, notice: "Login successful."
-  #     else
-  #       redirect_to login_path, notice: "Does not compute! Invalid email and/or password"
-  #     end
-  # end
+  def create
+    teacher = Teacher.find_by(params[:email])
+      if teacher && teacher.authenticate(params[:password])
+        session[:teacher_id] = true
+        redirect_to teachers_path, notice: "Login successful."
+      else
+        redirect_to login_path, notice: "Does not compute! Invalid email and/or password"
+      end
+  end
+
+  def destroy
+    session[:teacher_id] = false
+    redirect_to login_path
+  end
 end
 
   # u = User.find_by_email(params[:email])
