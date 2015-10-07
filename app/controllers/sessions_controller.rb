@@ -3,18 +3,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    teacher = Teacher.find_by(params[:email])
-      if teacher && teacher.authenticate(params[:password])
-        session[:login] = true
-        redirect_to teachers_path, notice: "Login successful."
-      else
-        redirect_to login_path, notice: "Does not compute! Invalid email and/or password"
-      end
+    teacher = Teacher.find_by_email(params[:email])
+    if teacher && teacher.authenticate(params[:password])
+      session[:teacher_login] = true
+      redirect_to teachers_path, notice: "Login successful."
+    else
+      redirect_to login_path, notice: "Does not compute! Invalid email and/or password"
+    end
   end
 
   def destroy
-    session[:login] = false
-    redirect_to login_path
+    session[:teacher_login] = false
+    redirect_to root_path, notice: "You are now logged out."
   end
 
   private
