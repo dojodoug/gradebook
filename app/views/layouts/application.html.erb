@@ -8,12 +8,15 @@
 </head>
 <body>
   <nav>
-    <h3 class="nav-title">Gradebook Grabber</h3>
+    <h3 class="nav-title"><%= link_to "Gradebook Grabber", root_path %></h3>
       <ul>
-          <li class="logout-link"><%= link_to "Log out", root_path %></a></li>
+          <li class="logout-link"><%= link_to "Log out", root_path %></li>
 
       </ul>
   </nav>
+
+  <h1 align="center">Welcome to Gradebook Grabber!</h1>
+  <h2 align="center">An app that allows Teachers, Students, and Parents to track student progress reports.</h2>
 
 <p id="notice"><%= notice %></p>
 <%= yield %>
