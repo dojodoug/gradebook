@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :parents
   root 'sessions#new'
 
   get    'login'   => 'sessions#new'

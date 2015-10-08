@@ -22,6 +22,7 @@
  nav {
     background-color: #333;
     margin: 0;
+    padding: 0;
     overflow: hidden;
   }
 
@@ -35,27 +36,28 @@ nav ul li {
     display: inline-block;
     list-style-type: none;
     float: right;
+    font-size: 16px;
   }
 
 /* Create a style for the first level items */
 nav > ul > li > a {
-    color: #aaa;
-    background-color:#333;
-    display: block;
-    line-height: 2em;
-    margin-right: 5px;
-    padding: 0.5em 0.5em;
-    text-decoration: none;
-    font-family: "Helvetica Neue";
-    font-size: 15px;
+  color: #aaa;
+  background-color:#333;
+  display: block;
+  line-height: 2em;
+  margin-right: 5px;
+  padding: 0.5em 0.5em;
+  font-family: "Helvetica Neue";
+  text-decoration: none;
   }
 
-  .nav-title {
-    display: inline-block;
-    float: left;
-    color: #aaa;
-    margin: 10px 5px 5px 10px;
-    padding: 10 0 10 0px;
-    text-decoration: none;
-    font-family: Lato;
-  }
+.nav-title {
+  display: inline-block;
+  float: left;
+  color: #aaa;
+  margin: 10px 5px 10px 10px;
+  padding: 10 0 10 0px;
+  text-decoration: none;
+  font-family: Lato;
+  font-size: 30px;
+}
