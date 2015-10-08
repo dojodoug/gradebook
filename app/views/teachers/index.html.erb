@@ -11,7 +11,7 @@
       <%= link_to 'Destroy Teacher', teacher, method: :delete, data: { confirm: 'Are you sure?' } %>
     </p>
 
-        <% teacher.students.each do |teacher| %>
+        <% teacher.students.each do |student| %>
           <tr>
             <td><%= student.name %></td>
             <td><%= student.email %></td>
@@ -22,7 +22,7 @@
             <td><%= link_to 'Add Grades', new_grade_path(student) %></td>
           </tr>
         <% end %>
-    
+
   <% end %>
 
   <br>

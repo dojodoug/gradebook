@@ -6,5 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Teacher.create!(name: "T", email: "t@t.com", password: "pword")
+Teacher.create!(name: "Mr. Tom", email: "tom@school.com", password: "pword")
 Teacher.create!(name: "Mrs. Norman", email: "norman@school.com", password: "normanteacher")
+
+Student.create!(name: "Jim", email: "jim@student.com", password: "pword")
+
+Parent.create!(name: "Ed", email: "ed@parent.com", password: "pword")
