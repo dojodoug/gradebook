@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :parents
   root 'sessions#new'
 
   get    'login'   => 'sessions#new'
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   resources :grades
-  resources :parents
   resources :students
   resources :teachers
 
